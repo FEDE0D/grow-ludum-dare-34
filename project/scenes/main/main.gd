@@ -8,6 +8,7 @@ func _ready():
 
 func _on_startButton_pressed():
 	Globals.get("Transition").change_to("res://scenes/level/level.scn")
+	Globals.get("Sounds").play_ui()
 
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
@@ -15,3 +16,4 @@ func _notification(what):
 
 func _on_creditsButton_pressed():
 	Globals.get("Transition").change_to("res://scenes/credits/credits.scn")
+	Globals.get("Sounds").play_ui()

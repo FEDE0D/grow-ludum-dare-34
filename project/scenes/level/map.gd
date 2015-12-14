@@ -48,8 +48,8 @@ func _ready():
 		set_cell(p[0] + 1, p[1] + 1, t[1], randi()%2==0, randi()%2==0)
 		set_cell(pp[0] + 1, pp[1] + 1, t[1], randi()%2==0, randi()%2==0)
 		set_cell(inter[0] + 1, inter[1] + 1, t[1], randi()%2==0, randi()%2==0)
-		
-	# HOLES
+	
+		# HOLES
 	var cant = int((width * height * 2) / 8)
 	for i in range(0, cant):
 		var pos = Vector2(randi()%(width*2 -1) + 1, randi()%(height*2 -1) + 1)

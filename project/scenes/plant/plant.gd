@@ -57,8 +57,11 @@ func right():
 func do_pickup_food():
 	strength = min(1.0, strength + (1.0/Globals.get("Level").enemies_count))
 	Globals.get("Indicators").set_strength(strength)
+	get_node("SamplePlayer").play("rat")
+	
 	if strength >= 1.0:
 		Globals.get("Level").add_exit()
+		get_node("SamplePlayer").play("exit")
 
 func do_start():
 	set_process(true)
